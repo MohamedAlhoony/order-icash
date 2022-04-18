@@ -1,0 +1,30 @@
+.refNo {
+    font-size: 1.2rem;
+}
+.icashAmountContainer {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+.icashAmountContainer span {
+    color: #f5a62b;
+}
+.listGroup {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+.listGroup li {
+    font-size: 1.1rem;
+    color: inherit;
+    border: none;
+    background-color: inherit;
+}
+.badge {
+    font-size: 1.1rem;
+}
+.listGroup li > div:first-child {
+    width: 100%;
+}
+.listGroup .content {
+    overflow-x: auto;
+}
