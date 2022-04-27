@@ -15,7 +15,7 @@ const FormData = (props) => {
                             id: 'phone',
                         })
                     }
-                    placeholder="رقم الهاتف"
+                    placeholder="9x-xxx-xx-xx"
                     style={{ direction: 'ltr' }}
                 />
                 <InputGroup.Text id="basic-addon2">218+</InputGroup.Text>
@@ -24,12 +24,15 @@ const FormData = (props) => {
                 <Form.Control
                     min={1}
                     value={props.qty}
-                    onChange={(e) =>
+                    onChange={(e) => {
+                        if (!/^[1-9]+[0-9]*$/.test(e.target.value)) {
+                            return
+                        }
                         props.handleInputChange({
                             value: e.target.value,
                             id: 'qty',
                         })
-                    }
+                    }}
                     style={{ width: '12rem' }}
                     type="number"
                     placeholder="الكمية"
